@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const BOOKING_URL = "#";
+const BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ04lpFXlAK8NdjoavYjAc0c8MYTmEjCz0RIF8TWSMmOXXiYAD_IwBkTTQIQFmZsibPYhiWI1Gxd";
 const LINKEDIN_URL = "#";
 
 const techServices = [
