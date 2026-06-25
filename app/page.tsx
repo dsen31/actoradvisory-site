@@ -1,7 +1,4 @@
-import Image from "next/image";
-
 const BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ04lpFXlAK8NdjoavYjAc0c8MYTmEjCz0RIF8TWSMmOXXiYAD_IwBkTTQIQFmZsibPYhiWI1Gxd";
-const LINKEDIN_URL = "#";
 
 const techServices = [
   {
@@ -401,8 +398,7 @@ function About() {
   return (
     <section className="bg-slate-50 py-16 sm:py-24" id="about">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
+        <div className="max-w-2xl">
             <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
               About
             </p>
@@ -423,24 +419,7 @@ function About() {
               >
                 Book a call
               </a>
-              <a
-                href={LINKEDIN_URL}
-                className="inline-flex items-center px-6 py-3 border border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold rounded-md transition-colors"
-              >
-                LinkedIn &rarr;
-              </a>
             </div>
-          </div>
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="w-72 h-80 rounded-xl overflow-hidden bg-slate-200 relative shadow-sm">
-              <Image
-                src="/headshot.jpg"
-                alt="Dustin Senor, founder of aCTOr Advisory"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -480,12 +459,6 @@ function Footer() {
           <p className="text-slate-500 text-sm">
             &copy; 2026 aCTOr Advisory. All rights reserved.
           </p>
-          <a
-            href={LINKEDIN_URL}
-            className="text-slate-400 hover:text-white text-sm font-medium transition-colors"
-          >
-            LinkedIn &rarr;
-          </a>
         </div>
       </div>
     </footer>
