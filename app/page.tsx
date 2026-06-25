@@ -434,7 +434,7 @@ function CTASection() {
           Ready to make smarter technology decisions?
         </h2>
         <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-          Book a free 15-minute discovery call. No pressure, no pitch — just a
+          Book a free 30-minute discovery call. No pressure, no pitch — just a
           conversation about where you are and where you want to go.
         </p>
         <a
