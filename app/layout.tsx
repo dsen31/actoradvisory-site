@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "aCTOr Advisory | Technology Advisory & AI Training",
   description:
     "aCTOr Advisory connects growing businesses with pre-vetted technology vendors and provides practical AI training for teams. Technology strategy, cybersecurity, telecom audits, and more.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "aCTOr Advisory",
     description:

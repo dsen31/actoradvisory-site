@@ -133,7 +133,7 @@ function Hero() {
             href={BOOKING_URL}
             className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg rounded-md transition-colors"
           >
-            Book a Free 15-Minute Call
+            Book a Free 30-Minute Call
           </a>
         </div>
       </div>
