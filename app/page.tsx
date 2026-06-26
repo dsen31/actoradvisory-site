@@ -1,3 +1,6 @@
+import Nav from "./components/nav";
+import Footer from "./components/footer";
+
 const BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ04lpFXlAK8NdjoavYjAc0c8MYTmEjCz0RIF8TWSMmOXXiYAD_IwBkTTQIQFmZsibPYhiWI1Gxd";
 
 const techServices = [
@@ -96,24 +99,6 @@ function CheckIcon() {
         clipRule="evenodd"
       />
     </svg>
-  );
-}
-
-function Nav() {
-  return (
-    <nav className="sticky top-0 z-50 bg-slate-900 border-b border-slate-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <span className="text-white font-bold text-xl tracking-tight select-none">
-          a<span className="text-blue-400">CTO</span>r Advisory
-        </span>
-        <a
-          href={BOOKING_URL}
-          className="hidden sm:inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-md transition-colors"
-        >
-          Book a Free Call
-        </a>
-      </div>
-    </nav>
   );
 }
 
@@ -445,23 +430,6 @@ function CTASection() {
         </a>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-slate-950 py-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-slate-300 font-bold text-lg tracking-tight">
-            a<span className="text-blue-400">CTO</span>r Advisory
-          </span>
-          <p className="text-slate-500 text-sm">
-            &copy; 2026 aCTOr Advisory. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
   );
 }
 
