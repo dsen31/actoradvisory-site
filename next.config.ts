@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ebwtcbfupujwmgmrnzwp.supabase.co",
+        pathname: "/storage/v1/object/public/Assets/**",
+      },
+    ],
   },
 };
 

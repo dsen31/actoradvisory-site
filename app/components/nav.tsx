@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const BOOKING_URL =
   "https://calendar.google.com/calendar/appointments/schedules/AcZssZ04lpFXlAK8NdjoavYjAc0c8MYTmEjCz0RIF8TWSMmOXXiYAD_IwBkTTQIQFmZsibPYhiWI1Gxd";
 
@@ -5,8 +7,14 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-slate-900 border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="/" className="text-white font-bold text-xl tracking-tight select-none">
-          a<span className="text-blue-400">CTO</span>r Advisory
+        <a href="/" className="select-none">
+          <Image
+            src="https://ebwtcbfupujwmgmrnzwp.supabase.co/storage/v1/object/public/Assets/actor-advisory-logo.png"
+            alt="aCTOr Advisory"
+            width={150}
+            height={75}
+            className="w-[150px] h-auto"
+          />
         </a>
         <a
           href={BOOKING_URL}
