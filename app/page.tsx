@@ -36,13 +36,19 @@ const techServices = [
     title: "Clean Energy & Physical Security",
     desc: "Sustainable energy programs and comprehensive physical security assessments.",
   },
+  {
+    title: "Website Development",
+    desc: "A website built to bring in customers, not just look good.",
+  },
+  {
+    title: "Tech Support",
+    desc: "Reliable, responsive support so your team never gets stuck waiting on IT.",
+  },
 ];
 
 const pricingTiers = [
   {
     title: "Individual Coaching",
-    price: "$75–$125",
-    unit: "/hour",
     features: [
       "1-on-1 personalized sessions",
       "Learn at your own pace",
@@ -52,8 +58,6 @@ const pricingTiers = [
   },
   {
     title: "Half-Day Workshop",
-    price: "$500–$750",
-    unit: "",
     features: [
       "Up to 5 participants",
       "4-hour hands-on session",
@@ -63,8 +67,6 @@ const pricingTiers = [
   },
   {
     title: "Full-Day Workshop",
-    price: "$1,000–$1,500",
-    unit: "",
     features: [
       "Up to 10 participants",
       "Full-day deep dive",
@@ -74,8 +76,6 @@ const pricingTiers = [
   },
   {
     title: "Multi-Week Program",
-    price: "$1,250",
-    unit: "/person",
     features: [
       "4–6 week program",
       "Ongoing accountability",
@@ -132,13 +132,13 @@ function ServicesOverview() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-            Two ways we help your business
+            Three ways we help your business
           </h2>
           <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
             Expert technology guidance or hands-on AI training — or both.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-slate-50 rounded-xl p-8 border border-slate-200">
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
               <svg
@@ -198,6 +198,49 @@ function ServicesOverview() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-1">
+              Automation
+            </h3>
+            <p className="text-slate-600 mb-6">
+              Stop running your business on spreadsheets and manual data
+              entry. We connect your software together so information flows
+              automatically.
+            </p>
+            <ul className="space-y-2 mb-6">
+              {[
+                "Replace spreadsheets & manual entry",
+                "Connect your software together",
+                "Automate finance, sales & ops workflows",
+                "AI readiness & implementation",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <CheckIcon />
+                  <span className="text-slate-700 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+              Free consultation
+            </span>
+          </div>
+
+          <div className="bg-slate-50 rounded-xl p-8 border border-slate-200">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
+              <svg
+                className="w-6 h-6 text-blue-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                 />
               </svg>
@@ -222,8 +265,8 @@ function ServicesOverview() {
                 </li>
               ))}
             </ul>
-            <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">
-              Starting at $75/hour
+            <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+              Free consultation
             </span>
           </div>
         </div>
@@ -313,6 +356,86 @@ function TechAdvisoryDetail() {
   );
 }
 
+function LeadGenDetail() {
+  const leadGenServices = [
+    {
+      title: "SEO",
+      desc: "Show up when the right people search for what you do.",
+    },
+    {
+      title: "Paid Ads",
+      desc: "Targeted campaigns that put you in front of ready buyers.",
+    },
+    {
+      title: "AI Search Visibility",
+      desc: "Show up as a source when people ask ChatGPT and other AI tools questions in your space.",
+    },
+    {
+      title: "Geo-Fencing",
+      desc: "Reach the right customers based on where they are.",
+    },
+  ];
+
+  return (
+    <section className="bg-slate-50 py-16 sm:py-24" id="lead-generation">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-14">
+          <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
+            Lead Generation
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+            A website that actually brings in customers
+          </h2>
+          <p className="mt-4 text-lg text-slate-600">
+            A good-looking website isn&apos;t enough on its own. If it isn&apos;t
+            built to be found and built to convert, it&apos;s just a digital
+            brochure. We handle the full picture, not just the design.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {leadGenServices.map((service) => (
+            <div
+              key={service.title}
+              className="bg-white rounded-lg p-5 border border-slate-200"
+            >
+              <div className="w-8 h-8 bg-blue-100 rounded-md flex items-center justify-center mb-3">
+                <svg
+                  className="w-4 h-4 text-blue-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-slate-900 text-sm mb-2">
+                {service.title}
+              </h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                {service.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10">
+          <a
+            href={BOOKING_URL}
+            className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-md transition-colors"
+          >
+            Talk to an advisor &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AITrainingDetail() {
   return (
     <section className="bg-white py-16 sm:py-24" id="ai-training">
@@ -350,10 +473,9 @@ function AITrainingDetail() {
                 {tier.title}
               </h3>
               <div className="mb-4">
-                <span className="text-2xl font-bold text-slate-900">
-                  {tier.price}
+                <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+                  Free consultation
                 </span>
-                <span className="text-slate-500 text-sm">{tier.unit}</span>
               </div>
               <ul className="space-y-2 flex-1">
                 {tier.features.map((f) => (
@@ -441,6 +563,7 @@ export default function Home() {
         <Hero />
         <ServicesOverview />
         <TechAdvisoryDetail />
+        <LeadGenDetail />
         <AITrainingDetail />
         <About />
         <CTASection />
