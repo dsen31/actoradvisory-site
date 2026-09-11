@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your First Post Title Goes Here | aCTOr Advisory</title>
+<meta name="description" content="Write a one-sentence summary of this post here for search engines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="container nav-row">
+    <a href="../index.html" class="brand">
+      <svg class="mark" viewBox="0 0 16 16" fill="none"><path d="M8 0 L9.5 6.5 L16 8 L9.5 9.5 L8 16 L6.5 9.5 L0 8 L6.5 6.5 Z"/></svg>
+      aCTOr Advisory
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="../index.html#offerings">Services</a>
+      <a href="../index.html#audience">Who We Help</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../blog.html">Blog</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="../index.html#contact" class="btn-anime">
+        <span class="btn-anime-bg">Sign Up</span>
+        <span class="btn-anime-overlay">Sign Up</span>
+      </a>
+      <button class="nav-menu-btn" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-bottom:0;">
+    <div class="container col gap-sm">
+      <a href="../blog.html" class="link-discover" style="margin-bottom:var(--gap-sm);"><svg viewBox="0 0 24 24" fill="none" style="transform:rotate(180deg);"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Back to Blog</a>
+      <span class="eyebrow">Month Day, Year</span>
+      <h1>Your First Post Title Goes Here</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:var(--gap-lg);">
+    <div class="container col gap-md" style="max-width:42rem;">
+      <p class="paragraph-xl">
+        This is your opening paragraph. Start with the point you actually want the
+        reader to walk away with, not a slow windup. One or two sentences is plenty.
+      </p>
+      <p class="paragraph-xl u-text-steel">
+        This is a second paragraph. Keep sentences short. Write like you're
+        explaining it to a client over coffee, not writing a whitepaper.
+      </p>
+      <h2>A Subheading, If You Need One</h2>
+      <p class="paragraph-xl u-text-steel">
+        Break longer posts into a few short sections with headings like this one.
+        It makes the post easier to scan, which is what most readers actually do.
+      </p>
+      <p class="paragraph-xl u-text-steel">
+        End with a clear next step: what should the reader do after finishing this,
+        book a call, check a related page, or just walk away smarter?
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" style="padding-top:var(--gap-lg);">
+  <div class="container col gap-sm">
+    <div class="border"></div>
+    <div class="footer-bottom">Copyright © <span id="year"></span> aCTOr Advisory. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

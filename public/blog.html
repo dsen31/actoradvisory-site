@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | aCTOr Advisory</title>
+<meta name="description" content="Straight talk on technology partnerships, AI adoption, and CRM systems from aCTOr Advisory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="container nav-row">
+    <a href="index.html" class="brand">
+      <svg class="mark" viewBox="0 0 16 16" fill="none"><path d="M8 0 L9.5 6.5 L16 8 L9.5 9.5 L8 16 L6.5 9.5 L0 8 L6.5 6.5 Z"/></svg>
+      aCTOr Advisory
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#offerings">Services</a>
+      <a href="index.html#audience">Who We Help</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html#contact" class="btn-anime">
+        <span class="btn-anime-bg">Sign Up</span>
+        <span class="btn-anime-overlay">Sign Up</span>
+      </a>
+      <button class="nav-menu-btn" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-bottom:var(--gap-xl);">
+    <div class="container col gap-sm">
+      <p class="eyebrow">From aCTOr Advisory</p>
+      <h1>Notes on Technology, Partnerships &amp; AI</h1>
+      <p class="paragraph-xl u-text-steel">Straight, practical takes on vendor decisions, AI adoption, and CRM systems, no fluff.</p>
+    </div>
+  </section>
+
+  <section class="section u-bg-alice" style="padding-top:0;">
+    <div class="container">
+      <div class="offer-grid" id="blog-grid">
+        <!-- Add a new .offer-card block here each time you publish a post -->
+        <a href="blog/first-post.html" class="offer-card" style="min-height:20rem;">
+          <div class="media-placeholder" data-label="Photo"><img class="media-placeholder-img" src="/images/blog-first-post.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="offer-card-body">
+            <span class="paragraph-sm u-text-white" style="opacity:.75;">Coming Soon</span>
+            <h3 class="u-text-white">Your First Post Title Goes Here</h3>
+            <p class="paragraph-lg u-text-white">A short one or two sentence preview of what this post covers, written to make someone want to click.</p>
+            <span class="link-discover">Read more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" style="padding-top:var(--gap-lg);">
+  <div class="container col gap-sm">
+    <div class="border"></div>
+    <div class="footer-bottom">Copyright © <span id="year"></span> aCTOr Advisory. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

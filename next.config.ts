@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -15,6 +14,9 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
+  },
+  async rewrites() {
+    return [{ source: "/", destination: "/index.html" }];
   },
 };
 
