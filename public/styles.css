@@ -60,3 +60,12 @@ html{scroll-padding-top:62px}body{font-family:Helvetica,Arial,sans-serif;backgro
 
 /* Breathing room between the opening hero and first service image. */
 .hero{margin-bottom:clamp(48px,7vw,112px)}
+
+/* Keep mobile chapters in normal flow; avoid sticky/parallax clipping. */
+@media(max-width:700px){
+  .chapter-scene{height:auto;min-height:560px;min-height:75svh;overflow:hidden}
+  .chapter-scene .service-photo{position:absolute;inset:0;width:100%;height:100%;transform:none!important;will-change:auto;z-index:0}
+  .chapter-scene .section-heading{position:relative;inset:auto;height:auto;min-height:560px;min-height:75svh;padding:80px 20px;z-index:1}
+  .section-heading h2{font-size:clamp(38px,11vw,56px);overflow-wrap:break-word}
+  .hero:before{transform:none!important;will-change:auto}
+}
