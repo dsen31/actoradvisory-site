@@ -69,3 +69,20 @@ html{scroll-padding-top:62px}body{font-family:Helvetica,Arial,sans-serif;backgro
   .section-heading h2{font-size:clamp(38px,11vw,56px);overflow-wrap:break-word}
   .hero:before{transform:none!important;will-change:auto}
 }
+
+/* Service images remain behind the cards as the section scrolls. */
+.service{position:relative;isolation:isolate;padding-bottom:72px}
+.chapter-scene{position:sticky;top:0;height:100svh;min-height:0;z-index:0;overflow:hidden}
+.chapter-scene .service-photo{position:absolute;inset:0;height:100%;width:100%;transform:none!important;will-change:auto}
+.chapter-scene .section-heading{position:relative;inset:auto;height:100%;min-height:0;z-index:1}
+.feature-grid{position:relative;z-index:2;margin-top:0;padding:32px;background:#090909;border:1px solid #ffffff24;box-shadow:0 16px 60px #0005}
+.service>.back{position:relative;z-index:2;background:#090909;color:#fff}
+@media(max-width:700px){
+  .chapter-scene{height:85svh;min-height:520px}
+  .chapter-scene .section-heading{height:100%;min-height:0;padding:80px 20px}
+  .feature-grid{margin:0 16px;padding:20px;gap:36px}
+  .service{padding-bottom:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .chapter-scene{position:relative}
+}
