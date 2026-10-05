@@ -143,3 +143,6 @@ footer a[href="resources.html"],footer a[href="privacy.html"],footer a[href="/pr
 @media(prefers-reduced-motion:reduce){.card-arrow{transition:none}}
 
 .preview-banner{position:fixed;bottom:12px;right:12px;z-index:30;padding:8px 12px;border:1px solid #444;border-radius:4px;background:#171717ee;pointer-events:none}
+
+.contact-details a{display:inline-flex;align-items:center;gap:9px}.contact-icon{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
