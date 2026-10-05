@@ -146,3 +146,6 @@ footer a[href="resources.html"],footer a[href="privacy.html"],footer a[href="/pr
 
 .contact-details a{display:inline-flex;align-items:center;gap:9px}.contact-icon{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
+
+.clean-energy-art{background-image:url('images/clean-energy-card.png');background-size:cover;background-position:center;}
+
