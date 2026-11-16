@@ -34,6 +34,39 @@ document.querySelectorAll('.contact-form').forEach(form => {
   });
 });
 
+document.querySelectorAll('.newsletter-form').forEach(form => {
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector('.status');
+    const email = new FormData(form).get('email');
+    if (button.disabled) return;
+    button.disabled = true;
+    status.textContent = 'Submitting…';
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          source: 'Newsletter signup: ' + location.pathname,
+          email,
+          message: 'Please add this email address to the aCTOr Advisory newsletter list.'
+        }),
+        signal: AbortSignal.timeout(20000)
+      });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error('Signup not confirmed');
+      status.textContent = 'Thanks—your signup has been received.';
+      form.reset();
+    } catch {
+      status.textContent = 'We couldn’t confirm your signup. Please email dustin@actoradvisory.com.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
+
 const loginDialog = document.querySelector('#login-dialog');
 document.querySelector('#login-open')?.addEventListener('click', () => loginDialog?.showModal());
 document.querySelectorAll('[data-close]').forEach(button => {
