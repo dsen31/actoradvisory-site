@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/resources.html": ["./app/resources-content.html"],
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
