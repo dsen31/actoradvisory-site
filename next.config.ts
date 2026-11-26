@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/resources.html": ["./app/resources-content.html"],
+    "/resources/your-team-has-ai-tools": ["./app/ai-adoption-article.html"],
   },
   images: {
     unoptimized: true,
